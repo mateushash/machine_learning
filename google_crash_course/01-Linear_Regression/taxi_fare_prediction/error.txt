@@ -1,0 +1,16 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787095581.022863    9815 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "/home/noob/Documents/current_work/ml_crash-course/01-Linear_Regression/taxi_fare_prediction/model_trainning.py", line 76, in <module>
+    experiment_1 = train_model('one_feature', model_1, training_df, 'FARE', settings_1)
+  File "/home/noob/Documents/current_work/ml_crash-course/01-Linear_Regression/taxi_fare_prediction/model_trainning.py", line 43, in train_model
+    history = model.fit(x=features,
+                        y=label,
+                        batch_size=settings.batch_size,
+                        epochs=settings.number_epochs)
+  File "/home/noob/anaconda3/envs/ai_env/lib/python3.13/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/noob/anaconda3/envs/ai_env/lib/python3.13/site-packages/keras/src/trainers/trainer.py", line 1122, in _assert_compile_called
+    raise ValueError(msg)
+ValueError: You must call `compile()` before using the model.
